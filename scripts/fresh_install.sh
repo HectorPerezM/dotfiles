@@ -1,13 +1,15 @@
 #! /bin/bash
 
-echo "Installing ..."
+echo "Starting ..."
+echo "Update & Upgrade"
+sudo apt upgrade
+sudo apt update
 
+echo "	[+] curl"
+sudo apt install -y curl
 
-
-
-echo "Installing Flameshot"
+echo "	[+] Flameshot"
 sudo apt install flameshot
-
 
 
 echo "Finished!"
