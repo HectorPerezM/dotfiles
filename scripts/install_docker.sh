@@ -1,6 +1,10 @@
 #! /bin/bash
 
 
+# TODO
+#	- Agregar variables para manejar versiones
+#	- Agregar variables para manejar urls de descarga
+
 echo "Installing ..."
 echo "	[+] Docker"
 
@@ -18,5 +22,9 @@ sudo usermod -aG docker ${USER}
 sudo - ${USER}
 id -nG
 
+echo "	[+] Docker-Compose"
+
+sudo wget -O  /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Linux-x86_64
+sudo chmod +x /usr/local/bin/docker-compose
 
 echo "Finished!"
